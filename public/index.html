@@ -9,7 +9,6 @@
 
 <style>
 
-/* FUNDO COM IMAGEM */
 body{
 margin:0;
 height:100vh;
@@ -18,18 +17,18 @@ justify-content:center;
 align-items:center;
 font-family:Arial;
 
-/* imagem + efeito escuro */
+/* FUNDO COM IMAGEM */
 background:
-linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)),
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.9)),
 url("https://images.unsplash.com/photo-1639322537228-f710d846310a");
 
 background-size:cover;
 background-position:center;
 }
 
-/* CARD LOGIN */
+/* CAIXA LOGIN */
 .login-box{
-width:320px;
+width:340px;
 padding:40px;
 border-radius:25px;
 
@@ -39,33 +38,33 @@ backdrop-filter: blur(25px);
 text-align:center;
 color:white;
 
-box-shadow:0 20px 50px rgba(0,0,0,0.6);
+box-shadow:0 0 40px rgba(0,0,0,0.6);
 }
 
-/* FOTO PERFIL */
+/* AVATAR */
 .avatar{
-width:80px;
-height:80px;
+width:90px;
+height:90px;
 border-radius:50%;
 background: rgba(255,255,255,0.2);
 margin:auto;
 margin-bottom:20px;
 }
 
-/* INPUTS */
+/* INPUT */
 .input-group{
 margin:20px 0;
-text-align:left;
 }
 
-.input-group input{
+input{
 width:100%;
-padding:12px;
+padding:14px;
 border:none;
 border-bottom:2px solid rgba(255,255,255,0.5);
 background:transparent;
 color:white;
 outline:none;
+font-size:16px;
 }
 
 /* BOTÃO */
@@ -73,22 +72,19 @@ button{
 width:100%;
 padding:15px;
 border:none;
-border-radius:20px;
-margin-top:20px;
+border-radius:25px;
 
 background: linear-gradient(90deg,#ff416c,#3b82f6);
 color:white;
 font-weight:bold;
 font-size:16px;
+
+cursor:pointer;
 }
 
-/* EXTRA */
-.options{
-display:flex;
-justify-content:space-between;
-font-size:12px;
-margin-top:10px;
-opacity:0.8;
+/* EFEITO HOVER */
+button:hover{
+opacity:0.9;
 }
 
 </style>
@@ -101,6 +97,8 @@ opacity:0.8;
 
 <div class="avatar"></div>
 
+<h2>Smart Wise</h2>
+
 <div class="input-group">
 <input id="email" placeholder="Email">
 </div>
@@ -109,24 +107,16 @@ opacity:0.8;
 <input id="senha" type="password" placeholder="Senha">
 </div>
 
-<div class="options">
-<span><input type="checkbox"> Lembrar</span>
-<span>Esqueceu?</span>
-</div>
-
-<button onclick="login()">LOGIN</button>
+<button onclick="login()">Entrar</button>
 
 </div>
 
 <script>
-
-// login simples
 function login(){
 localStorage.setItem("logado","true")
 window.location="chat.html"
 }
-
 </script>
 
 </body>
-  </html>
+</html>
